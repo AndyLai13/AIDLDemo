@@ -10,9 +10,12 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
 		<service
-			android:name=".aidl.AIDLService"
-			android:enabled="false"
-			android:exported="false"></service>
+			android:name=".aidl.AIDLService">
+			<intent-filter>
+				<action android:name="com.andylai.aidlservice"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</service>
 
 		<activity android:name=".MainActivity">
 			<intent-filter>
